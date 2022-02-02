@@ -9,7 +9,7 @@ module.exports = {
   // 主题和它的配置
 //   theme: '@vuepress/theme-default',
   themeConfig: {
-    lastUpdated: '更新时间', // string | boolean
+    lastUpdated: '时间', // string | boolean
     // 导航栏 Logo
     logo: '/assets/img/hero.png',
     sidebar: 'auto',
