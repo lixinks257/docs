@@ -4,15 +4,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "repository": "git@github.com:lixinks257/docs.git",
-  "author": "xin.li <xin.li@quncaotech.com>",
+  "author": "lixin",
   "license": "MIT",
   "devDependencies": {
+    "moment": "^2.29.1",
     "vuepress": "^1.9.7"
   },
-  "dependencies": {
-    "moment": "^2.29.1"
-  }
+  "dependencies": {}
 }
