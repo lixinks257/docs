@@ -1,26 +1,27 @@
-const moment = require('moment');
+const moment = require('moment')
 module.exports = {
   // 站点配置
   //   lang: 'zh-CN',
+  base: '/docs/',
   title: '你好， VuePress ！',
   description: '这是我的第一个 VuePress 站点',
   head: [['meta', { name: 'Keywords', content: 'lixin123' }]],
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          // const moment = require('moment')
+          moment.locale('zh-cn')
+          return moment(timestamp).format('LLLL')
+        },
+      },
+    ],
+  ],
   // 主题和它的配置
   //   theme: '@vuepress/theme-default',
   themeConfig: {
-    plugins: [
-      [
-        '@vuepress/last-updated',
-        {
-          transformer: (timestamp, lang) => {
-            // 不要忘了安装 moment
-            // const moment = require('moment')
-            moment.locale('zh-cn')
-            return moment(timestamp).format('LLLL')
-          }
-        }
-      ]
-    ],
     lastUpdated: '更新时间', // string | boolean
     // 导航栏 Logo
     logo: '/assets/img/hero.png',
