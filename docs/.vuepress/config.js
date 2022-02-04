@@ -20,7 +20,7 @@ module.exports = {
       platform: 'github-v4',
       // 其他的 Vssue 配置
       owner: 'lixinks257',
-      repo: 'NAME_OF_REPO',
+      repo: 'docs',
       clientId: 'ba5a4142a1963dbc8393',
       clientSecret: '3797194a396945b9312afc4ffde185359ba3fdc9',
     },
