@@ -6,19 +6,25 @@ module.exports = {
   title: '你好， VuePress ！',
   description: '这是我的第一个 VuePress 站点',
   head: [['meta', { name: 'Keywords', content: 'lixin123' }]],
-  plugins: [
-    [
-      '@vuepress/last-updated',
-      {
-        transformer: (timestamp, lang) => {
-          // 不要忘了安装 moment
-          // const moment = require('moment')
-          moment.locale('zh-cn')
-          return moment(timestamp).format('LLLL')
-        },
+  plugins: {
+    '@vuepress/last-updated': {
+      transformer: (timestamp, lang) => {
+        // 不要忘了安装 moment
+        // const moment = require('moment')
+        moment.locale('zh-cn')
+        return moment(timestamp).format('LLLL')
       },
-    ],
-  ],
+    },
+    '@vssue/vuepress-plugin-vssue': {
+      // 设置 `platform` 而不是 `api`
+      platform: 'github-v4',
+      // 其他的 Vssue 配置
+      owner: 'lixinks257',
+      repo: 'NAME_OF_REPO',
+      clientId: 'ba5a4142a1963dbc8393',
+      clientSecret: '3797194a396945b9312afc4ffde185359ba3fdc9',
+    },
+  },
   // 主题和它的配置
   //   theme: '@vuepress/theme-default',
   themeConfig: {
