@@ -1,5 +1,5 @@
 const moment = require('moment')
-const setret = require('./secret')
+const secret = require('./secret')
 module.exports = {
   // 时间组件
   '@vuepress/last-updated': {
@@ -18,8 +18,8 @@ module.exports = {
     // 其他的 Vssue 配置
     owner: 'lixinks257',
     repo: 'docs',
-    clientId: setret.clientId,
-    clientSecret: clientSecret.clientSecret,
+    clientId: secret.clientId,
+    clientSecret: secret.clientSecret,
     // Vssue 会自动尝试为你创建 Issue
     autoCreateIssue: true,
   },
