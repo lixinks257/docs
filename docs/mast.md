@@ -1,6 +1,7 @@
 ---
 # navbar: false
-title: mast
+sidebar: auto
+title: mast1
 ---
 
 ## MAST
